@@ -1,0 +1,10 @@
+one = "1"; two = "2";
+three = "3";
+
+zero = "0"; (*hi*)
+
+zero_two = "0 2";
+
+number = zero | one | two | three;
+
+sentence = "'hello world' 'Bye world'" ;
