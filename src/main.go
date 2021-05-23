@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"flag"
 	"os"
-	"strings"
 
 	"github.com/lian-rr/yantlr/src/ebnf"
 	"github.com/lian-rr/yantlr/src/utils"
@@ -50,7 +49,7 @@ func readFile(path string) []string {
 	for scanner.Scan() {
 		line := scanner.Text()
 
-		lines = append(lines, strings.TrimSpace(line))
+		lines = append(lines, line)
 	}
 
 	if err := scanner.Err(); err != nil {
