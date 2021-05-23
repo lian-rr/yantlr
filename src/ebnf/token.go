@@ -38,10 +38,12 @@ type (
 	}
 )
 
+// String returns a string description of the token
 func (t Token) String() string {
 	return fmt.Sprintf("ID: %4d Type: %s Line: %2d[%2d] Symbol: %s", t.Id, t.Type.String(), t.Position.Line, t.Position.Column, t.Symbol)
 }
 
+// String returns the text represantation of the TokenType
 func (t TokenType) String() string {
 	switch t {
 	case IDEN:
