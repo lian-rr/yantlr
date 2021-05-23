@@ -1,4 +1,4 @@
-package main
+package ebnf
 
 import (
 	"fmt"
@@ -76,7 +76,7 @@ func NewLexer() Lexer {
 	}
 }
 
-func (l *Lexer) ProcessLines(lines []string) {
+func (l *Lexer) LoadTokens(lines []string) {
 	ctx := &context{
 		open:       false,
 		strict:     false,

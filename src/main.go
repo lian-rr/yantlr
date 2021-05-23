@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/lian-rr/yantlr/src/ebnf"
 	"github.com/lian-rr/yantlr/src/utils"
 )
 
@@ -26,9 +27,9 @@ func init() {
 func main() {
 	lines := readFile(inputPath)
 
-	lexer := NewLexer()
+	lexer := ebnf.NewLexer()
 
-	lexer.ProcessLines(lines)
+	lexer.LoadTokens(lines)
 
 	for _, t := range lexer.Tokens {
 		logger.Info(t.String())
