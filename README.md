@@ -11,7 +11,7 @@ Use **-help** to see the flags.
 
 ## Build
 
-`cd src && go build -o ../yantlr && cd ..`
+`cd src && go build -o ../yantlr.x && cd ..`
 
 ## Run
 
