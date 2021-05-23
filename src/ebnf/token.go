@@ -48,6 +48,8 @@ func (t TokenType) String() string {
 	switch t {
 	case IDEN:
 		return "IDEN"
+	case CONCAT:
+		return "CONCAT"
 	case DEF:
 		return "DEF"
 	case TERM:
