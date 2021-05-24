@@ -15,7 +15,7 @@ Use **-help** to see the flags.
 
 ## Run
 
-`./yantlr -input=examples/pascal.yant`
+`./yantlr.x -input=examples/pascal.yant`
 
 ## File tree
 
