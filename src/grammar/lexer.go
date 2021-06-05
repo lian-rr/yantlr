@@ -1,4 +1,4 @@
-package ebnf
+package grammar
 
 import (
 	"strings"
@@ -146,25 +146,25 @@ func (ctx *context) buildToken(tType TokenType) Token {
 
 func charToTokenType(c rune) TokenType {
 	switch c {
-	case EQUALS:
+	case EQUALS: // =
 		return DEF
-	case COMMA:
+	case COMMA: // ,
 		return CONCAT
-	case SEMICOLON:
+	case SEMICOLON: // ;
 		return TERM
-	case VERTICAL:
+	case VERTICAL: // |
 		return ALTER
-	case L_SQUARE_B, R_SQUARE_B:
+	case L_SQUARE_B, R_SQUARE_B: // [ ]
 		return OPT
-	case L_CURLY_B, R_CURLY_B:
+	case L_CURLY_B, R_CURLY_B: // { }
 		return REP
-	case L_PARENTH, R_PARENTH:
+	case L_PARENTH, R_PARENTH: // ( )
 		return GROUP
-	case QUOTE, DQUOTE:
+	case QUOTE, DQUOTE: // ' "
 		return TERMI
-	case Q_MARK:
+	case Q_MARK: // ?
 		return SPEC
-	case HYPHEN:
+	case HYPHEN: // -
 		return EXCEP
 	default:
 		return UNK
