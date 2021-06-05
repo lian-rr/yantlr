@@ -5,7 +5,7 @@ import (
 	"flag"
 	"os"
 
-	"github.com/lian-rr/yantlr/src/ebnf"
+	"github.com/lian-rr/yantlr/src/grammar"
 	"github.com/lian-rr/yantlr/src/utils"
 )
 
@@ -26,7 +26,7 @@ func init() {
 func main() {
 	lines := readFile(inputPath)
 
-	lexer := ebnf.NewLexer()
+	lexer := grammar.NewLexer()
 
 	lexer.LoadTokens(lines)
 

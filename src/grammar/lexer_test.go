@@ -1,4 +1,4 @@
-package ebnf
+package grammar
 
 import (
 	"testing"
